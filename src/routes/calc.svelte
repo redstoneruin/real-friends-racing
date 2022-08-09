@@ -1,5 +1,71 @@
 
-<style>
+<script lang="ts">
+    let raceTime = "";
+    let raceLaps = 0;
+    let lapTimeStr = "";
+    let maxFuel = 0;
+    let usage = 0;
+    let extraLaps = 0;
+
+    let lapTime = 0;
+
+    let timedRace = true;
+
+    const submit = () => {
+    
+    }
+</script>
+
+<div class="pageContainer">
+    <div class="calcContainer">
+        <h1 class="pageHeading">Fuel Calculator</h1>
+
+        <form class="calcForm">
+        
+            {#if timedRace}
+                <p class="inputLabel">Race Time in Minutes</p>
+                <input class="formInput" size="1" type="number" bind:value={raceTime} /> 
+            {:else}
+                <p class="inputLabel">Race Laps</p>
+                <input class="formInput" size="1" type="number" bind:value={raceLaps} /> 
+            {/if}
+
+
+            <p class="inputLabel">Lap Time in Format: MM:SS.ms</p>
+            <input class="formInput" size="1" type="text" bind:value={lapTimeStr} />
+
+            <p class="inputLabel">Max Fuel</p>
+            <input class="formInput" size="1" type="number" bind:value={maxFuel} />
+
+            <p class="inputLabel">Fuel Usage</p>
+            <input class="formInput" size="1" type="number" bind:value={usage} />
+
+            <div class="buttonRow">
+                <p class="checkboxLabel">Timed Race</p>
+                <input type="checkbox" bind:checked={timedRace} />
+            </div>
+
+            <button on:click|preventDefault={submit} class="calcButton">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+<style lang="scss">
+.checkboxLabel {
+    margin-right:3px;
+}
+
+.buttonRow {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    width:100%;
+}
+
 .pageContainer {
     display:flex;
     flex-direction: column;
@@ -38,58 +104,3 @@
     margin: 10px 0 3px 0;
 }
 </style>
-
-<script>
-    let raceTime = "";
-    let raceLaps = 0;
-    let lapTimeStr = "";
-    let maxFuel = 0;
-    let usage = 0;
-    let extraLaps = 0;
-
-    let lapTime = 0;
-
-    let timedRace = true;
-
-    function submit() {
-
-    }
-</script>
-
-<div class="pageContainer">
-    <div class="calcContainer">
-        <h1 class="pageHeading">Calculator</h1>
-
-        <form class="calcForm">
-        
-            {#if timedRace}
-                <p class="inputLabel">Race Time in Minutes</p>
-                <input class="formInput" size="1" type="number" bind:value={raceTime} /> 
-            {:else}
-                <p class="inputLabel">Race Laps</p>
-                <input class="formInput" size="1" type="number" bind:value={raceLaps} /> 
-            {/if}
-
-
-            <p class="inputLabel">Lap Time in Format: MM:SS.ms</p>
-            <input class="formInput" size="1" type="text" bind:value={lapTimeStr} />
-
-            <p class="inputLabel">Max Fuel</p>
-            <input class="formInput" size="1" type="number" bind:value={maxFuel} />
-
-            <p class="inputLabel">Fuel Usage</p>
-            <input class="formInput" size="1" type="number" bind:value={usage} />
-
-            {#if timedRace}
-                <p></p>
-            {:else}
-                <p></p>
-            {/if}
-
-
-            <button class="calcButton">
-                Submit
-            </button>
-        </form>
-    </div>
-</div>
