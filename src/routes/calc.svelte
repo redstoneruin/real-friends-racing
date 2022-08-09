@@ -103,7 +103,7 @@
 
 <div class="pageContainer">
     <div class="calcContainer">
-        <h1 class="pageHeading">Fuel Calculator</h1>
+        <h1 class="pageHeading">Real Friends Fuel</h1>
 
         <form class="calcForm">
         
