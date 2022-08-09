@@ -1,0 +1,56 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-2435e811.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/build/hooks.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/layout.svelte": {
+    "file": "entries/fallbacks/layout.svelte.js",
+    "src": ".svelte-kit/runtime/components/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2435e811.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2435e811.js"
+    ]
+  },
+  "src/routes/calc.svelte": {
+    "file": "entries/pages/calc.svelte.js",
+    "src": "src/routes/calc.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2435e811.js"
+    ],
+    "css": [
+      "_app/immutable/assets/calc-529415f5.css"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2435e811.js"
+    ]
+  },
+  "_index-2435e811.js": {
+    "file": "_app/immutable/chunks/index-2435e811.js"
+  },
+  ".svelte-kit/build/hooks.js": {
+    "file": "_app/immutable/chunks/hooks-bced8853.js",
+    "src": ".svelte-kit/build/hooks.js",
+    "isDynamicEntry": true
+  }
+}
